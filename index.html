@@ -1,6 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      defer
+      src="https://www.googletagmanager.com/gtag/js?id=UA-156662433-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-156662433-1");
+    </script>
+
     <meta charset="utf-8" />
     <meta
       name="viewport"
@@ -9,13 +25,17 @@
     <meta name="description" content="" />
     <meta name="author" content="" />
 
-    <title>Vitali Zinkevich - Web Development</title>
+    <title>Vitali Zinkevich - Web and Mobile apps development</title>
 
     <!-- Font Awesome Icons -->
     <link
       href="vendor/fontawesome-free/css/all.min.css"
       rel="stylesheet"
       type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
     />
 
     <!-- Google Fonts -->
@@ -44,7 +64,7 @@
     >
       <div class="container">
         <a class="navbar-brand js-scroll-trigger" href="#page-top"
-          >Web Development</a
+          >Web and Mobile apps development.</a
         >
         <button
           class="navbar-toggler navbar-toggler-right"
@@ -63,11 +83,13 @@
               <a class="nav-link js-scroll-trigger" href="#about">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#services">Stack</a>
+              <a class="nav-link js-scroll-trigger" href="#services"
+                >Methodology</a
+              >
             </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#portfolio">Links</a>
-            </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#portfolio">Stack</a>
+            </li> -->
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
             </li>
@@ -90,9 +112,12 @@
           </div>
           <div class="col-lg-8 align-self-baseline">
             <p class="text-white-75 font-weight-light mb-5">
-              SEO friendly Frontend as Single Page Aplication, Server Side
-              Rendering Resourses, Static Sites. Backend as infrasructure as a
-              code, serverless, cloud computing. Classical local servers.
+              SEO friendly frontend as Single Page Application, Server Side
+              Rendering resources. Mobile apps for iOS and Android.
+            </p>
+            <p class="text-white-75 font-weight-light mb-5">
+              Backend as infrastructure as a code, serverless, cloud computing.
+              Classical personal servers.
             </p>
             <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about"
               >You are welcome.</a
@@ -109,15 +134,15 @@
           <div class="col-lg-8 text-center">
             <h2 class="text-white mt-0">We've got what you need!</h2>
             <hr class="divider light my-4" />
-            <p class="text-white-50 mb-4">Creation by dedicated team.</p>
-            <hr class="divider light my-4" />
-            <p class="text-white-50 mb-4">Desing and Develepment .</p>
+            <p class="text-white-50 mb-4">
+              Desing and Develepment Mobile and Web apps.
+            </p>
             <hr class="divider light my-4" />
             <p class="text-white-50 mb-4">Maintance and Support.</p>
             <hr class="divider light my-4" />
             <p class="text-white-50 mb-4">IT Consultancy.</p>
             <a class="btn btn-light btn-xl js-scroll-trigger" href="#services"
-              >Check stack</a
+              >Check it out</a
             >
           </div>
         </div>
@@ -127,42 +152,66 @@
     <!-- Services Section -->
     <section class="page-section" id="services">
       <div class="container">
-        <h2 class="text-center mt-0">At Your Service</h2>
+        <h2 class="text-center mt-0">Methodology</h2>
         <hr class="divider my-4" />
         <div class="row">
           <div class="col-lg-3 col-md-6 text-center">
             <div class="mt-5">
               <i class="fas fa-4x fa-gem text-primary mb-4"></i>
-              <h3 class="h4 mb-2">Sturdy Themes</h3>
-              <p class="text-muted mb-0">
-                Our themes are updated regularly to keep them bug free!
+              <h3 class="h4 mb-2">Iterative development</h3>
+              <p class="text-muted mb-0 ta-j">
+                Our clients receive daily reports of the work completed, as well
+                as working demo versions of the project. Due to this, you can
+                make necessary adjustments at any stage, resulting in a product
+                of the highest quality. This approach allows you to perform the
+                work alongside with the analysis of the results and any
+                necessary corrections. In addition, it significantly reduces the
+                risks in the early stages of the project, which is why the risk
+                management costs are also minimal.
               </p>
             </div>
           </div>
           <div class="col-lg-3 col-md-6 text-center">
             <div class="mt-5">
               <i class="fas fa-4x fa-laptop-code text-primary mb-4"></i>
-              <h3 class="h4 mb-2">Up to Date</h3>
-              <p class="text-muted mb-0">
-                All dependencies are kept current to keep things fresh.
+              <h3 class="h4 mb-2">Interaction with clients</h3>
+              <p class="text-muted mb-0 ta-j">
+                Regular interaction with clients helps us to create a trusting
+                and mutually convenient environment for cooperation and to avoid
+                many misunderstandings
               </p>
             </div>
           </div>
           <div class="col-lg-3 col-md-6 text-center">
             <div class="mt-5">
               <i class="fas fa-4x fa-globe text-primary mb-4"></i>
-              <h3 class="h4 mb-2">Ready to Publish</h3>
-              <p class="text-muted mb-0">
-                You can use this design as is, or you can make changes!
+              <h3 class="h4 mb-2">Fixed-time cycle</h3>
+              <p class="text-muted mb-0 ta-j">
+                For easy control of the workflow and to minimize possible bugs,
+                the whole project is divided into fixed time periods. At the end
+                of each iteration the working product is compiled and analyzed
+                and possible errors are identified. At the same time, a plan for
+                further action is formulated.
               </p>
             </div>
           </div>
           <div class="col-lg-3 col-md-6 text-center">
             <div class="mt-5">
               <i class="fas fa-4x fa-heart text-primary mb-4"></i>
-              <h3 class="h4 mb-2">Made with Love</h3>
+              <h3 class="h4 mb-2">Testing</h3>
+              <p class="text-muted mb-0 ta-j">
+                Continuous integration helps to reduce the complexity of
+                integration and make it more reliable, due to early detection
+                and correction of errors and inconsistencies.
+              </p>
               <p class="text-muted mb-0">
-                Is it really open source if it's not made with love?
+                — Unit Testing
+              </p>
+              <p class="text-muted mb-0">
+                — Integration testing
+              </p>
+              <p class="text-muted mb-0">
+                — Continuous integration
               </p>
             </div>
           </div>
@@ -170,7 +219,7 @@
       </div>
     </section>
 
-    <!-- Portfolio Section -->
+    <!-- Portfolio Section
     <section id="portfolio">
       <div class="container-fluid p-0">
         <div class="row no-gutters">
@@ -278,19 +327,7 @@
           </div>
         </div>
       </div>
-    </section>
-
-    <!-- Call to Action Section -->
-    <section class="page-section bg-dark text-white">
-      <div class="container text-center">
-        <h2 class="mb-4">Free Download at Start Bootstrap!</h2>
-        <a
-          class="btn btn-light btn-xl"
-          href="https://startbootstrap.com/themes/creative/"
-          >Download Now!</a
-        >
-      </div>
-    </section>
+    </section> -->
 
     <!-- Contact Section -->
     <section class="page-section" id="contact">
@@ -308,13 +345,15 @@
         <div class="row">
           <div class="col-lg-4 ml-auto text-center mb-5 mb-lg-0">
             <i class="fas fa-phone fa-3x mb-3 text-muted"></i>
-            <div>+1 (202) 555-0149</div>
+            <i class="fa fa-telegram fa-3x mb-3 text-muted"></i>
+
+            <div>+375 (29) 338-00-91</div>
           </div>
           <div class="col-lg-4 mr-auto text-center">
             <i class="fas fa-envelope fa-3x mb-3 text-muted"></i>
             <!-- Make sure to change the email address in anchor text AND the link below! -->
             <a class="d-block" href="mailto:contact@yourwebsite.com"
-              >contact@yourwebsite.com</a
+              >vitalizinkevich@gmail.com</a
             >
           </div>
         </div>
@@ -325,7 +364,7 @@
     <footer class="bg-light py-5">
       <div class="container">
         <div class="small text-center text-muted">
-          Copyright &copy; 2019 - Start Bootstrap
+          Copyright &copy; 2019 - vitalizinkevich.name
         </div>
       </div>
     </footer>
