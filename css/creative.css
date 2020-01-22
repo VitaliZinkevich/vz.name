@@ -9597,7 +9597,7 @@ hr.light {
 #mainNav .navbar-brand {
   font-family: "Merriweather Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 700;
-  color: #212529;
+  color: #6c757d;
 }
 
 #mainNav .navbar-nav .nav-item .nav-link {
@@ -9630,9 +9630,17 @@ hr.light {
   #mainNav .lang {
     border: none !important;
     background: transparent !important;
-    color: white;
+    color: rgba(255, 255, 255, 0.7);
     font-family: "Merriweather Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     font-weight: 700;
+    cursor: pointer;
+  }
+  #mainNav .opt2 {
+    cursor: pointer;
+    font-family: "Merriweather Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-weight: 700;
+    color: #dee2e6;
+    background-color: #6c757d;
   }
   #mainNav .navbar-nav .nav-item .nav-link {
     color: rgba(255, 255, 255, 0.7);
@@ -9653,6 +9661,10 @@ hr.light {
     font-family: "Merriweather Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     font-weight: 700;
     color: #212529;
+  }
+  #mainNav.navbar-scrolled .opt2 {
+    color: black;
+    background-color: white;
   }
   #mainNav.navbar-scrolled .navbar-brand {
     color: #212529;
