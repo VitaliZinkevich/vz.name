@@ -31,15 +31,22 @@
     box-shadow: none;
     background-color: transparent;
     .navbar-brand {
-      color: fade-out($white, .3);
+      color: fade-out($white, 0.3);
       &:hover {
         color: $white;
       }
     }
+    .lang {
+      border: none !important;
+      background: transparent !important;
+      color: white;
+      font-family: $font-family-sans-serif;
+      font-weight: $font-weight-bold;
+    }
     .navbar-nav {
       .nav-item {
         .nav-link {
-          color: fade-out($white, .3);
+          color: fade-out($white, 0.3);
           padding: 0 1rem;
           &:hover {
             color: $white;
@@ -54,6 +61,12 @@
     }
     // Navbar styling applied when the page is scrolled
     &.navbar-scrolled {
+      .lang {
+        color: black;
+        font-family: $font-family-sans-serif;
+        font-weight: $font-weight-bold;
+        color: $gray-900;
+      }
       box-shadow: $box-shadow;
       background-color: $white;
       .navbar-brand {
