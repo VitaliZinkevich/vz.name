@@ -280,10 +280,6 @@ button:not(:disabled),
   cursor: pointer;
 }
 
-.ta-j {
-  text-align: justify !important;
-}
-
 button::-moz-focus-inner,
 [type="button"]::-moz-focus-inner,
 [type="reset"]::-moz-focus-inner,
