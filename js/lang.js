@@ -18,7 +18,7 @@ var translateO = {
   "Web and Mobile development.": "Мобильная и Веб разработка.",
   About: "О нас",
   Methodology: "Процесс разработки",
-  Examples: "Примеры",
+  Stack: "Технологический Стэк",
   Contact: "Контакты",
   "FULLSTACK DEVELOPMENT FOR WEB AND MOBILE PLATFORMS.":
     "РАЗРАБОТКА МОБИЛЬНЫХ И WEB ПРИЛОЖЕНИЙ",
