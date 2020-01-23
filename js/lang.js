@@ -21,35 +21,35 @@ var translateO = {
   Examples: "Примеры",
   Contact: "Контакты",
   "FULLSTACK DEVELOPMENT FOR WEB AND MOBILE PLATFORMS.":
-    "РАЗРАБОТКА ПОЛНОГО ЦИКЛА ДЛЯ МОБИЛЬНОЙ И ВЕБ ПЛАТФОРМЫ",
-  "SEO friendly frontend as Single Page Application, Server Side Rendering, Static Sites. Mobile apps for iOS and Android.":
-    "SEO дружественный фронтенд",
+    "РАЗРАБОТКА МОБИЛЬНЫХ И WEB ПРИЛОЖЕНИЙ",
+  "SEO friendly frontend as Single Page Application, Server Side Rendering, Progressive Web Apps, Static Sites. Mobile apps for iOS and Android":
+    "SEO дружественный фронтенд. Фронтенд в виде: SPA, PWA, Server Side Rendering, Static Sites",
   "Backend as infrastructure as a code, serverless, cloud computing. Personal servers.":
-    "Бэкэнд супер",
+    "Бэкэнды в облаке, код как инфраструктура, serverless технологии. Персональные сервера",
   "YOU ARE WELCOME.": "ДОБРО ПОЖАЛОВАТЬ",
   "We've got what you need!": "У нас есть все что нужно",
   "Desing and Develepment Mobile and Web apps.":
     "Разработка и дизайн мобилиных и веб приложений",
   "Maintenance and Support.": "Техническое обслуживание и поддержка",
-  "IT Consultancy.": "Консультации",
-  "CHECK IT OUT": "Проверьте",
-  "Iterative development": "Итеративная разработка",
-  "Our clients receive daily reports of the work completed, as well as working demo versions of the project. Due to this, you can make necessary adjustments at any stage, resulting in a product of the highest quality. This approach allows you to perform the work alongside with the analysis of the results and any necessary corrections. In addition, it significantly reduces the risks in the early stages of the project, which is why the risk management costs are also minimal.":
-    "все супер мило",
+  "IT Consultancy.": "Консультации по проэкту",
+  "CHECK IT OUT": "Проверьте сами",
+  "Iterative development": "Разработка итерациями",
+  "Our clients receive daily reports of the work completed, as well as working demo versions of the project. Due to this, you can make necessary adjustments at any stage, resulting in a product of the highest quality.":
+    "Наши клиенты получают ежедневные отчеты о проделанной работе, так же как и демо версию приложения. Благодаря этому заказчик может внести необходимые правки на любом этапе, создавая продукт высочайшего качества.",
   "Interaction with clients": "Постоянное общение с клиентом",
   "Regular interaction with clients helps us to create a trusting and mutually convenient environment for cooperation and to avoid many misunderstandings":
-    "все дадим что бы смотреть",
-  "Fixed-time cycle": "Фиксированные по времени итерации",
+    "Постоянный контакт с клиентом позволяет создать доверительную и и удобную среду для сотрудничества и избежать многих недоразумений",
+  "Fixed-time cycle": "Фиксированные временные этапы",
   "For easy control of the workflow and to minimize possible bugs, the whole project is divided into fixed time periods. At the end of each iteration the working product is compiled and analyzed and possible errors are identified. At the same time, a plan for further action is formulated.":
-    "Проэкт будет разделен на периоды",
+    "Для простого контроля рабочего процесса и минимизации возможных багов в рабочем приложении, весь проэкт разделен на фиксированные временные этапы. В конце каждого периода проэкт собирается в приложение для тестирования и анализа.  В тоже время дополняется или актуализируется план на следующий временной этап.",
   Testing: "Тесты",
   "Continuous integration helps to reduce the complexity of integration and make it more reliable, due to early detection and correction of errors and inconsistencies.":
-    "постоянное внедрение",
-  "— Unit Testing  — Integration testing  — Continuous integration":
-    "Тест такие тесты сякие",
-  "Let's Get In Touch!": "Давайте знакомиться",
+    "Благодаря постоянному конторолю рабочей демо версии приложения снижается сложность внедрения, делая его более предсказуемым. Благодаря постоянному анализу и поиску багов в приложении.",
+  "— Unit Testing — Integration testing — Continuous integration":
+    "Используется юнит тестирование кода, тестирование при внедрении, тестирование при изменениях.",
+  "Let's Get In Touch!": "Контакты",
   "Ready to start your next project? Give a call or send an email and We will get back to you as soon as possible!":
-    "Готовы начать свой проэкт?",
+    "Готовы начать свой проэкт? Свяжитесь с нами по телефону, мессенджеру, напишите в соц сети или по почте.",
   "I am at Facebook": "Я на Фейсбуке"
 };
 
