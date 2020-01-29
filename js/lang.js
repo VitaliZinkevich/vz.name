@@ -1,3 +1,10 @@
+// цвет на красном фоне белый тусклый
+// О нас пункт
+//высота о нас в экран
+// экран контактов вместе с копирайтом
+// версия приложения в пакадже
+// баг на гите заявленный закрыть?
+// белорусский PWA
 window.onload = function() {
   var selectElement = document.getElementById("lang");
   console.log(navigator.language.split("-")[0]);
@@ -9,7 +16,7 @@ window.onload = function() {
   }
   selectElement.addEventListener("change", function(event) {
     var all = document.getElementsByClassName("text");
-    makeTranslate(all, event.target.value);
+    makeTranslate(all);
   });
 };
 
@@ -28,7 +35,7 @@ var translateO = {
   "Backend as infrastructure as a code, serverless, cloud computing. Personal servers.":
     "Бэкэнды в облаке, код как инфраструктура, serverless технологии. Персональные сервера",
   "YOU ARE WELCOME.": "ДОБРО ПОЖАЛОВАТЬ",
-  "I've got what you need!": "Есть все что нужно",
+  "I've got what you need!": "Есть все, что нужно",
   "Desing and Develepment Mobile and Web apps.":
     "Разработка и дизайн мобилиных и веб приложений",
   "Maintenance and Support.": "Техническое обслуживание и поддержка",
@@ -50,11 +57,11 @@ var translateO = {
     "Используется юнит тестирование кода, тестирование при внедрении, тестирование при изменениях.",
   Contact: "Контакты",
   "Ready to start your next project? Give a call or send an email and I will get back to you as soon as possible!":
-    "Готовы начать свой проект? Свяжитесь с нами по телефону, мессенджеру, напишите в соц сети или по почте.",
+    "Готовы начать свой проект? Свяжитесь по телефону, мессенджеру, напишите в соц сети или по почте.",
   "I am at Facebook": "Я на Фейсбуке"
 };
 
-function makeTranslate(nodes, lang) {
+function makeTranslate(nodes) {
   for (var i = 0, max = nodes.length; i < max; i++) {
     if (translateO.hasOwnProperty(nodes[i].innerText)) {
       nodes[i].innerText = translateO[nodes[i].innerText];
