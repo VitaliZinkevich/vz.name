@@ -49,7 +49,7 @@ var translateO = {
   "— Unit Testing — Integration testing — Continuous integration":
     "Используется юнит тестирование кода, тестирование при внедрении, тестирование при изменениях.",
   Contact: "Контакты",
-  "Ready to start your next project? Give a call or send an email and We will get back to you as soon as possible!":
+  "Ready to start your next project? Give a call or send an email and I will get back to you as soon as possible!":
     "Готовы начать свой проект? Свяжитесь с нами по телефону, мессенджеру, напишите в соц сети или по почте.",
   "I am at Facebook": "Я на Фейсбуке"
 };
