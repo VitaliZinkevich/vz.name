@@ -28,7 +28,7 @@ var translateO = {
   "Backend as infrastructure as a code, serverless, cloud computing. Personal servers.":
     "Бэкэнды в облаке, код как инфраструктура, serverless технологии. Персональные сервера",
   "YOU ARE WELCOME.": "ДОБРО ПОЖАЛОВАТЬ",
-  "We've got what you need!": "У нас есть все что нужно",
+  "I've got what you need!": "Есть все что нужно",
   "Desing and Develepment Mobile and Web apps.":
     "Разработка и дизайн мобилиных и веб приложений",
   "Maintenance and Support.": "Техническое обслуживание и поддержка",
