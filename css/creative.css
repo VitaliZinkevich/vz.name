@@ -9601,7 +9601,11 @@ textarea {
 }
 
 .bp {
-  padding-bottom: 1rem !important;
+  padding-bottom: 0.1rem !important;
+}
+
+#messageValidation #emailValidation {
+  min-height: 20px;
 }
 
 #mainNav {

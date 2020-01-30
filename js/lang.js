@@ -1,4 +1,8 @@
 window.onload = function() {
+  // форма
+  validateForm();
+
+  // перевод
   var selectElement = document.getElementById("lang");
   if (navigator.language.split("-")[0] === "ru") {
     var all = document.getElementsByClassName("text");
@@ -69,5 +73,30 @@ function makeTranslate(nodes) {
   translateO = {};
   keys.forEach(function(key, index) {
     translateO[values[index]] = keys[index];
+  });
+}
+
+function validateForm() {
+  document.querySelector("#contact").addEventListener("click", function(event) {
+    event.preventDefault();
+    var email = document.querySelector("#email").value;
+    var message = document.querySelector("#message").value;
+    var emailRegExp = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    var res = emailRegExp.test(email);
+    var emailV = document.querySelector("#emailValidation");
+    var messageV = document.querySelector("#messageValidation");
+
+    if (message.length < 5) {
+      //действия по не валидной
+      messageV.textContent = "Message should be more than 5 letters";
+      return false;
+    }
+
+    if (false /*res*/) {
+      //действия по не валидной
+      return false;
+    }
+    messageV.textContent = "";
+    console.log("final");
   });
 }
