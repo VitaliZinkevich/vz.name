@@ -9604,7 +9604,8 @@ textarea {
   padding-bottom: 0.1rem !important;
 }
 
-#messageValidation #emailValidation {
+#messageValidation,
+#emailValidation {
   min-height: 20px;
 }
 
