@@ -13,6 +13,10 @@ window.onload = function() {
 };
 
 var translateO = {
+  // "Message should be more than 5 letters":
+  //   "Сообщение должно быть больше 5 символов",
+  Submit: "Отправить",
+  "Your message:": "Сообщение:",
   "Vitali Zinkevich - Web and Mobile development":
     "Виталий Зинкевич - Мобильная и Веб разработка",
   "Web and Mobile development.": "Мобильная и Веб разработка.",
