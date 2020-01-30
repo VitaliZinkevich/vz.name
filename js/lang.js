@@ -1,5 +1,3 @@
-// форму связи в контакты
-// PWA
 window.onload = function() {
   var selectElement = document.getElementById("lang");
   if (navigator.language.split("-")[0] === "ru") {
