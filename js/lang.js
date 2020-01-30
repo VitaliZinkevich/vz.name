@@ -1,13 +1,7 @@
-// цвет на красном фоне белый тусклый
-// О нас пункт
-//высота о нас в экран
-// экран контактов вместе с копирайтом
-// версия приложения в пакадже
-// баг на гите заявленный закрыть?
-// белорусский PWA
+// форму связи в контакты
+// PWA
 window.onload = function() {
   var selectElement = document.getElementById("lang");
-  console.log(navigator.language.split("-")[0]);
   if (navigator.language.split("-")[0] === "ru") {
     var all = document.getElementsByClassName("text");
 
@@ -24,7 +18,7 @@ var translateO = {
   "Vitali Zinkevich - Web and Mobile development":
     "Виталий Зинкевич - Мобильная и Веб разработка",
   "Web and Mobile development.": "Мобильная и Веб разработка.",
-  About: "О нас",
+  About: "Сервисы",
   Methodology: "Процесс разработки",
   Stack: "Стэк",
   Contact: "Контакты",
@@ -40,7 +34,7 @@ var translateO = {
     "Разработка и дизайн мобилиных и веб приложений",
   "Maintenance and Support.": "Техническое обслуживание и поддержка",
   "IT Consultancy.": "Консультации по проекту",
-  "CHECK IT OUT": "ПРОВЕРЬТЕ САМИ",
+  "CHECK IT OUT": "ЧТО ДАЛЬШЕ?",
   "Iterative development": "Разработка итерациями",
   "Our clients receive daily reports of the work completed, as well as working demo versions of the project. Due to this, you can make necessary adjustments at any stage, resulting in a product of the highest quality.":
     "Наши клиенты получают ежедневные отчеты о проделанной работе, так же как и демо версию приложения. Благодаря этому заказчик может внести необходимые правки на любом этапе, создавая продукт высочайшего качества.",
