@@ -3,17 +3,17 @@ var http = require("http").createServer(app);
 var io = require("socket.io")(http);
 var i = 0;
 
-io.on("connection", function(socket) {
+io.on("connect", function(socket) {
   console.log("a user connected " + i);
+  console.log(socket.id);
+  socket.emit("connect", socket.id);
+  socket.emit("id", socket.id);
+  io.on("chat", function(msg) {
+    console.log("message: " + msg);
+  });
   i++;
   socket.on("disconnect", function() {
     console.log("user disconnected");
-  });
-  socket.on("chat", function(msg) {
-    console.log("message: " + msg);
-  });
-  socket.on("my", function(msg) {
-    console.log("my: " + msg);
   });
 });
 
