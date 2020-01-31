@@ -4,12 +4,16 @@ var io = require("socket.io")(http);
 var i = 0;
 
 io.on("connect", function(socket) {
+  // уведомить о подключении соккета меня имэйлем
+  // зайти в чат и писать сообщения будет бродкастить для всех подключенных
+  // уведомить об отключении клиента
   console.log("a user connected " + i);
   console.log(socket.id);
   socket.emit("connect", socket.id);
   socket.emit("id", socket.id);
-  io.on("chat", function(msg) {
+  socket.on("chat", function(msg) {
     console.log("message: " + msg);
+    socket.emit("message", msg);
   });
   i++;
   socket.on("disconnect", function() {
