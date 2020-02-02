@@ -396,31 +396,27 @@
 
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="http://localhost:3008/socket.io/socket.io.js"></script>
     <script>
-      var socket = io("http://localhost:3008");
+      var exampleSocket = new WebSocket(
+        // "wss://0y2nxzqxkg.execute-api.us-east-1.amazonaws.com/dev"
+        ""
+      );
 
-      socket.on("error", function(data) {
-        console.log(data || "error");
-      });
-
-      socket.on("connect", function() {
-        console.log(socket.connected);
-        socket.on("id", function(id) {
-          console.log(id);
-        });
-
-        socket.on("message", function(msg) {
-          $("#messages").append($("<li>").text(msg));
-        });
-
+      exampleSocket.onopen = function(event) {
         $("form").submit(function(e) {
           e.preventDefault(); // prevents page reloading
-          socket.emit("chat", $("#m").val());
+          exampleSocket.send(
+            JSON.stringify({ action: "sendMessage", data: $("#m").val() })
+          );
           $("#m").val("");
           return false;
         });
-      });
+
+        exampleSocket.onmessage = function(event) {
+          console.log(event);
+          $("#messages").append($("<li>").text(event.data));
+        };
+      };
     </script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
