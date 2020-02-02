@@ -67,3 +67,11 @@ function makeTranslate(nodes) {
     translateO[values[index]] = keys[index];
   });
 }
+
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
