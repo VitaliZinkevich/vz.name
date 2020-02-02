@@ -4,11 +4,12 @@ window.onload = function() {
     var all = document.getElementsByClassName("text");
 
     selectElement.value = "ru";
-    makeTranslate(all, "ru");
+    makeTranslate(all);
   }
   selectElement.addEventListener("change", function(event) {
     var all = document.getElementsByClassName("text");
     makeTranslate(all);
+    $(".navbar-collapse").collapse("hide");
   });
 };
 

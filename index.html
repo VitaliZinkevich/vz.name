@@ -371,26 +371,24 @@
                 background: #eee;
               }
             </style>
-            <span>Online chat</span>
+            <!-- <span>Online chat</span>
             <ul id="messages"></ul>
             <form action="">
               <input id="m" autocomplete="off" /><button>Send</button>
-            </form>
+            </form> -->
           </div>
           <div class="col-6">
-            <input />
-            <input />
+            <!-- <input />
+            <input /> -->
           </div>
         </div>
       </div>
 
-        <button class="open-button rounded-circle" onclick="openForm()"><i class="fa fa-commenting-o fa-3x" aria-hidden="true"></i>
+        <button class="open-button rounded-circle d-flex justify-content-center" onclick="openForm()"><i class="fa fa-commenting-o fa-2x" aria-hidden="true"></i>
         </button>
 
         <div class="chat-popup" id="myForm">
           <form class="form-container">
-            <h1>Chat</h1>
-
             <label for="msg"><b>Message</b></label>
             <textarea
               placeholder="Type message.."
@@ -404,16 +402,6 @@
             </button>
           </form>
         </div>
-
-        <script>
-          function openForm() {
-            document.getElementById("myForm").style.display = "block";
-          }
-
-          function closeForm() {
-            document.getElementById("myForm").style.display = "none";
-          }
-        </script>
       </div>
     </section>
 
