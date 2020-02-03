@@ -18,6 +18,7 @@ window.onload = function() {
 };
 
 var translateO = {
+  "Form was send. Thank you.": "Форма отправлена. Спасибо.",
   "Email required": "Email обязателен",
   "Message should be more than 5 letters":
     "Сообщение должно быть больше 5 символов",
@@ -110,7 +111,20 @@ function validateForm() {
       return false;
     }
     messageV.textContent = "";
-
-    console.log("final");
+    socket.send(
+      JSON.stringify({
+        action: "email",
+        data: JSON.stringify({ email: email, message: message })
+      })
+    );
+    document.querySelector("#email").value = "";
+    document.querySelector("#message").value = "";
+    if (selectElement === "ru") {
+      document.querySelector("#response").textContent =
+        "Форма отправлена. Спасибо.";
+    } else {
+      document.querySelector("#response").textContent =
+        "Form was send. Thank you.";
+    }
   });
 }
