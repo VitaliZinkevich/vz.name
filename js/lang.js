@@ -8,11 +8,12 @@ window.onload = function() {
     var all = document.getElementsByClassName("text");
 
     selectElement.value = "ru";
-    makeTranslate(all, "ru");
+    makeTranslate(all);
   }
   selectElement.addEventListener("change", function(event) {
     var all = document.getElementsByClassName("text");
     makeTranslate(all);
+    $(".navbar-collapse").collapse("hide");
   });
 };
 
@@ -22,6 +23,10 @@ var translateO = {
     "Сообщение должно быть больше 5 символов",
   Submit: "Отправить",
   "Your message:": "Сообщение:",
+  Close: "Закрыть",
+  Send: "Отправить",
+  "Chat request was sended. I will come ASAP. Please wait.":
+    "Запрос для онлайн чата отправлен. Я скоро буду. Пожалуйста, подождите.",
   "Vitali Zinkevich - Web and Mobile development":
     "Виталий Зинкевич - Мобильная и Веб разработка",
   "Web and Mobile development.": "Мобильная и Веб разработка.",
@@ -57,8 +62,8 @@ var translateO = {
   "— Unit Testing — Integration testing — Continuous integration":
     "Используется юнит тестирование кода, тестирование при внедрении, тестирование при изменениях.",
   Contact: "Контакты",
-  "Ready to start your next project? Give a call or send an email and I will get back to you as soon as possible!":
-    "Готовы начать свой проект? Свяжитесь по телефону, мессенджеру, напишите в соц сети или по почте.",
+  "Ready to start your next project? Give a call or use live chat, send an email and I will get back to you as soon as possible!":
+    "Готовы начать свой проект? Свяжитесь в чате по телефону, мессенджеру, напишите в соц сети или по почте.",
   "I am at Facebook": "Я на Фейсбуке"
 };
 

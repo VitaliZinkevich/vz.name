@@ -306,10 +306,7 @@
           <div class="col-lg-8 text-center">
             <h2 class="mt-0 text">Contact</h2>
             <hr class="divider my-4" />
-            <p class="text-muted mb-5 text">
-              Ready to start your next project? Give a call or send an email and
-              I will get back to you as soon as possible!
-            </p>
+            <p class="text-muted mb-5 text">Ready to start your next project? Give a call or use live chat, send an email and I will get back to you as soon as possible!</p>
           </div>
         </div>
         <div class="row">
@@ -349,6 +346,24 @@
             <button id="contact" class="btn btn-primary w-100 text">Submit</button>
           </form>
       </div>
+
+        <button class="open-button rounded-circle d-flex justify-content-center" onclick="openForm()"><i class="fa fa-commenting-o fa-2x" aria-hidden="true"></i>
+        </button>
+
+        <div class="chat-popup" id="myForm">
+          <form class="form-container">
+            <span class='text' id='note'></span>
+            <ul id="messages"></ul>
+            <input
+              autocomplete="off"
+              id="m"
+            ></input>
+
+            <button class="btn text">Send</button>
+            <button type="button" class="btn cancel text" onclick="closeForm()">Close</button>
+          </form>
+        </div>
+      </div>
     </section>
    
     </div>
@@ -364,6 +379,52 @@
 
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
+    <script>
+
+      var socket = new WebSocket(
+        "wss://0y2nxzqxkg.execute-api.us-east-1.amazonaws.com/dev"
+      );
+      
+      socket.onopen = function(event) {
+        $("form").submit(function(e) {
+          e.preventDefault(); // prevents page reloading
+          socket.send(
+            JSON.stringify({ action: "sendMessage", data: $("#m").val()})
+          );
+          $("#m").val("");
+          return false;
+        });
+
+        socket.onmessage = function(event) {
+          $("#messages").append($("<li>").text(event.data));
+        };
+      };
+
+      var sendReq = false;
+      function openForm() {
+
+        document.getElementById("myForm").style.display = "block";
+
+        if (!sendReq) {
+          sendReq = true
+          var selectElementVal = document.getElementById("lang").value;
+          socket.send(
+           selectElementVal
+          );
+          var selectElementVal = document.getElementById("lang").value;
+          var message = ''
+          if (selectElementVal === 'ru') {
+            message = 'Запрос для онлайн чата отправлен. Я скоро буду. Пожалуйста, подождите.'
+          } else {
+            message = `Chat request was sended. I will come ASAP. Please wait.`
+          }
+          $("#note").text(message);
+        }
+      }
+      function closeForm() {
+        document.getElementById("myForm").style.display = "none";
+      }
+    </script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <!-- Plugin JavaScript -->
