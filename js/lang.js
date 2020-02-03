@@ -14,6 +14,10 @@ window.onload = function() {
 };
 
 var translateO = {
+  Close: "Закрыть",
+  Send: "Отправить",
+  "Chat request was sended. I will come ASAP. Please wait.":
+    "Запрос для онлайн чата отправлен. Я скоро буду. Пожалуйста, подождите.",
   "Vitali Zinkevich - Web and Mobile development":
     "Виталий Зинкевич - Мобильная и Веб разработка",
   "Web and Mobile development.": "Мобильная и Веб разработка.",

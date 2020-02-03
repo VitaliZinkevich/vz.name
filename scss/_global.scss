@@ -61,8 +61,6 @@ body {
   position: fixed;
   bottom: 2vh;
   right: 2vh;
-  // width: 50px;
-  // height: 50px;
 }
 
 /* The popup chat - hidden by default */
@@ -90,7 +88,6 @@ body {
   border: none;
   background: #f1f1f1;
   resize: none;
-  // min-height: 200px;
 }
 
 /* When the textarea gets focus, do something */
@@ -120,4 +117,19 @@ body {
 .form-container .btn:hover,
 .open-button:hover {
   opacity: 1;
+}
+
+#messages {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  max-height: 350px;
+  overflow: auto;
+}
+#messages li {
+  padding: 5px 10px;
+  word-break: break-all;
+}
+#messages li:nth-child(odd) {
+  background: #eee;
 }

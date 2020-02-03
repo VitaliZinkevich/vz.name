@@ -337,51 +337,6 @@
             >
           </div>
         </div>
-        <div class="row">
-          <div class="col-6">
-            <!-- <style>
-              form {
-                /* background: #000; */
-                padding: 3px;
-                /* position: fixed;
-                bottom: 0; */
-                width: 100%;
-              }
-              form input {
-                /* border: 0; */
-                padding: 10px;
-                width: 79%;
-                margin-right: 0.5%;
-              }
-              form button {
-                width: 20%;
-                background: rgb(130, 224, 255);
-                border: none;
-                padding: 10px;
-              }
-              #messages {
-                list-style-type: none;
-                margin: 0;
-                padding: 0;
-              }
-              #messages li {
-                padding: 5px 10px;
-              }
-              #messages li:nth-child(odd) {
-                background: #eee;
-              }
-            </style> -->
-            <!-- <span>Online chat</span>
-            <ul id="messages"></ul>
-            <form action="">
-              <input id="m" autocomplete="off" /><button>Send</button>
-            </form> -->
-          </div>
-          <div class="col-6">
-            <!-- <input />
-            <input /> -->
-          </div>
-        </div>
       </div>
 
         <button class="open-button rounded-circle d-flex justify-content-center" onclick="openForm()"><i class="fa fa-commenting-o fa-2x" aria-hidden="true"></i>
@@ -389,19 +344,15 @@
 
         <div class="chat-popup" id="myForm">
           <form class="form-container">
-            
+            <span class='text' id='note'></span>
             <ul id="messages"></ul>
-            <label for="msg"><b>Type message...</b></label>
             <input
+              autocomplete="off"
               id="m"
-              name="msg"
-              required
             ></input>
 
-            <button disabled class="btn cancel">Send</button>
-            <button type="button" class="btn cancel" onclick="closeForm()">
-              Close
-            </button>
+            <button class="btn text">Send</button>
+            <button type="button" class="btn cancel text" onclick="closeForm()">Close</button>
           </form>
         </div>
       </div>
@@ -420,37 +371,46 @@
     <script src="vendor/jquery/jquery.min.js"></script>
     <script>
 
+      var socket = new WebSocket(
+        "wss://0y2nxzqxkg.execute-api.us-east-1.amazonaws.com/dev"
+      );
       
-      // var exampleSocket = new WebSocket(
-      //   // "wss://0y2nxzqxkg.execute-api.us-east-1.amazonaws.com/dev"
-      //   ""
-      // );
-
-      // exampleSocket.onopen = function(event) {
-        // function go(){
+      socket.onopen = function(event) {
         $("form").submit(function(e) {
           e.preventDefault(); // prevents page reloading
-          // exampleSocket.send(
-          //   JSON.stringify({ action: "sendMessage", data: $("#m").val()})
-          // );
-          console.log($("#m").val())
+          socket.send(
+            JSON.stringify({ action: "sendMessage", data: $("#m").val()})
+          );
           $("#m").val("");
           return false;
         });
-      // }
-        // go()
 
-        // exampleSocket.onmessage = function(event) {
-        //   console.log(event);
-        //   $("#messages").append($("<li>").text(event.data));
-        // };
-      // };
+        socket.onmessage = function(event) {
+          $("#messages").append($("<li>").text(event.data));
+        };
+      };
 
+      var sendReq = false;
       function openForm() {
+
         document.getElementById("myForm").style.display = "block";
 
+        if (!sendReq) {
+          sendReq = true
+          var selectElementVal = document.getElementById("lang").value;
+          socket.send(
+           selectElementVal
+          );
+          var selectElementVal = document.getElementById("lang").value;
+          var message = ''
+          if (selectElementVal === 'ru') {
+            message = 'Запрос для онлайн чата отправлен. Я скоро буду. Пожалуйста, подождите.'
+          } else {
+            message = `Chat request was sended. I will come ASAP. Please wait.`
+          }
+          $("#note").text(message);
+        }
       }
-
       function closeForm() {
         document.getElementById("myForm").style.display = "none";
       }
