@@ -17,8 +17,9 @@ window.onload = function() {
 };
 
 var translateO = {
-  // "Message should be more than 5 letters":
-  //   "Сообщение должно быть больше 5 символов",
+  "Email required": "Email обязателен",
+  "Message should be more than 5 letters":
+    "Сообщение должно быть больше 5 символов",
   Submit: "Отправить",
   "Your message:": "Сообщение:",
   "Vitali Zinkevich - Web and Mobile development":
@@ -85,18 +86,26 @@ function validateForm() {
     var res = emailRegExp.test(email);
     var emailV = document.querySelector("#emailValidation");
     var messageV = document.querySelector("#messageValidation");
-
-    if (message.length < 5) {
-      //действия по не валидной
-      messageV.textContent = "Message should be more than 5 letters";
+    var selectElement = document.getElementById("lang").value;
+    if (!res) {
+      if (selectElement === "ru") {
+        emailV.textContent = "Email обязателен";
+      } else {
+        emailV.textContent = "Email required";
+      }
       return false;
     }
-
-    if (false /*res*/) {
-      //действия по не валидной
+    emailV.textContent = "";
+    if (message.length < 5) {
+      if (selectElement === "ru") {
+        messageV.textContent = "Сообщение должно быть больше 5 символов";
+      } else {
+        messageV.textContent = "Message should be more than 5 letters";
+      }
       return false;
     }
     messageV.textContent = "";
+
     console.log("final");
   });
 }
