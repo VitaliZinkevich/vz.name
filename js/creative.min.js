@@ -1,5 +1,5 @@
 /*!
- * Start Bootstrap - My personal site v0.0.2 ()
+ * Start Bootstrap - My personal site v0.1.0 ()
  * Copyright 2013-2020 Vitali Zinkevich
  * Licensed under MIT (https://github.com/BlackrockDigital/vitalizinkevich.name/blob/master/LICENSE)
  */
